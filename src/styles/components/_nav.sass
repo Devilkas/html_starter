@@ -1,0 +1,99 @@
+body
+    &._pc
+        .menu__list
+            &>li:hover
+                .menu__sub-list
+                    opacity: 1
+                    visibility: visible
+                    transform: translate(0,0)
+                    pointer-events: all
+    &._touch
+        .menu__list
+            &>li
+                display: flex
+                align-items: center
+                &._active
+                    .menu__sub-list
+                        opacity: 1
+                        visibility: visible
+                        transform: translate(0,0)
+                        pointer-events: all
+                    .menu__arrow
+                        transform: rotate(-180deg)
+        .menu__link
+            flex: 1 1 auto
+        .menu__arrow
+            display: block
+            width: 0
+            height: 0
+            margin: 0 0 0 5px
+            transition: transform .3s ease 0s
+            border-top: 5px solid #fff
+            border-right: 5px solid transparent
+            border-left: 5px solid transparent
+    &._lock
+        overflow: hidden
+
+.menu
+    background: #000
+    // font-family: $Roboto
+    // &__body
+    &__list
+        &>li
+            list-style: none
+            position: relative
+            // padding: 15px
+            text-transform: uppercase
+            border-bottom: 3px solid transparent
+            &:hover
+                & .menu__link
+                    border-bottom: 3px solid #fff
+    &__link
+        color: #fff
+        font-size: 18px
+        padding: 23px 15px 23px 15px
+        // padding: 0 15px 0 15px
+    &__sub-list
+        position: absolute
+        top: 100%
+        left: 0
+        background: #000
+        border: 1px solid #000
+        min-width: 200px
+        li
+            list-style: none
+            text-transform: none
+            a
+                padding: 10px
+                display: block
+            &:hover
+                background: #fff
+                transition: all .3s ease 0s
+                a
+                    color: #000
+                img
+                    background: #000
+                    border: 1px solid #000
+
+            &:last-child
+                margin: 0
+    &__sub-link
+        color: #fff
+        img
+            width: 100%
+            height: auto
+            border-radius: 10px
+            border: 1px solid transparent
+    &__arrow
+        display: none
+    &__icon
+        display: none
+
+.menu
+    &__link.current-link
+        border-bottom: 3px solid #fff
+    &__sub-list
+        li
+            a.current-sublink
+                background: #fff
+                color: #000

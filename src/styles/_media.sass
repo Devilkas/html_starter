@@ -1,0 +1,121 @@
+@media (min-width: 320px)
+    .modal
+        opacity: 0
+        visibility: hidden
+        pointer-events: none
+        transition: all .3s ease 0s
+
+@media (min-width: 768px)
+    .menu
+        &__list
+            display: flex
+            align-items: center
+            &>li
+                padding: 25px 0px
+        &__sub-list
+            transform: translate(0, 10px)
+            opacity: 0
+            visibility: hidden
+            pointer-events: none
+            transition: all .3s ease 0s
+
+@media (max-width: 992px)
+    .menu
+        &__icon
+            z-index: 5
+            display: block
+            position: relative
+            width: 30px
+            height: 18px
+            cursor: pointer
+            &._active
+                span
+                    transform: scale(0) translate(0, -50%)
+                &:before
+                    top: 50%
+                    transform: rotate(-45deg) translate(0, -50%)
+                &:after
+                    bottom: 50%
+                    transform: rotate(45deg) translate(0, 50%)
+            span,
+            &:before,
+            &:after
+                left: 0
+                position: absolute
+                height: 10%
+                width: 100%
+                transition: all .3s ease 0s
+                background: #fff
+            &:before,
+            &:after
+                content: ""
+            &:before
+                top: 0
+            &:after
+                bottom: 0
+            span
+                top: 50%
+                transform: scale(1) translate(0, -50%)
+        &__body
+            position: fixed
+            top: 0
+            left: -100%
+            width: 100%
+            height: 100%
+            background: rgba(0, 0, 0, .9)
+            padding: 100px 30px 30px 30px
+            transition: left .3s easy 0s
+            overflow: auto
+            // z-index: 2
+            &:before
+                content: ""
+                position: fixed
+                width: 100%
+                top: 0
+                left: 0
+                height: 70px
+                background: transparent
+                z-index: 2
+            &._active
+                left: 0
+                z-index: 2
+
+        &__list
+            // padding: 20px
+            display: block
+            // background: $main-purple
+            &>li
+                flex-wrap: wrap
+                margin: 0 0 20px 0
+                &._active .menu__sub-list
+                    display: block
+            &>li:last-child
+                margin: 0
+        &__link
+            font-size: 24px
+        &__sub-list
+            position: relative
+            flex: 1 1 100%
+            margin: 20px 0 0 0
+            display: none
+        &__sub-link
+            font-size: 15px
+
+/*==========  Desktop First  ==========*/
+
+// @media only screen and (max-width: 2880px)
+// @media only screen and (max-width: 2048px)
+// @media only screen and (max-width: 1920px)
+// @media only screen and (max-width: 1680px)
+// @media only screen and (max-width: 1366px)
+// @media only screen and (max-width: 1280px)
+// @media only screen and (max-width: 1024px)
+// @media only screen and (max-width: 992px)
+// @media only screen and (max-width: 768px)
+// @media only screen and (max-width: 576px)
+// @media only screen and (max-width: 428px)
+// @media only screen and (max-width: 414px)
+// @media only screen and (max-width: 393px)
+// @media only screen and (max-width: 375px)
+// @media only screen and (max-width: 360px)
+// @media only screen and (max-width: 320px)

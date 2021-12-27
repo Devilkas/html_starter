@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <meta name="author" content="Kushnerov Oleksandr">
+    <meta name="keywords" content="Keywords">
+    <meta name="description" content="Description">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/app.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+    <div class="container-large">
+        <div class="header__row">
+            <div class="header__menu menu">
+    <div class="menu__icon">
+        <span></span>
+    </div>
+    <nav class="menu__body">
+        <ul class="menu__list">
+            <li>
+                <a href="#" class="menu__link open-sub current-link">Item 1</a>
+                <span class="menu__arrow"></span>
+                <ul class="menu__sub-list ">
+                    <li>
+                        <a href="#" class="menu__sub-link current-sublink">Sub Item 1</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu__sub-link">Sub Item 2</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu__sub-link">Sub Item 3</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#" class="menu__link">Item 2</a>
+            </li>
+            <li>
+                <a href="#" class="menu__link">Item 3</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+        </div>
+    </div>
+</header>
+        <main class="main">
+            <div class="container-large">
+                <button type="button" class="btn" data-toggle="modal" data-target="#modalId">Modal
+                </button>
+            </div>
+        </main>
+        <footer class="footer">
+    <div class="container-large">
+        <div class="footer__madeBy">
+            <p>Development and technical support by <a href="#">Oleksandr Kushnerov</a></p>
+        </div>
+    </div>
+</footer>
+<div class="modal" id="modalId" role="dialog" data-init="modal">
+    <div class="modal__dialog modal-default">
+        <div class="modal__header">
+            <h5 class="modal__title">Modal Title</h5>
+            <button type="button" class="modal__close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal__body">
+            <form class="modal__form form" action="#" method="POST">
+                <div class="form__group">
+                    <input type="text" name="input_name" id="input_name" class="form__control _req"
+                        placeholder="Input Name" required>
+                </div>
+                <div class="form__group form__btn">
+                    <button type="submit" class="form__control btn btn-message">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+    </div>
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>
