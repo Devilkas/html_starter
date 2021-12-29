@@ -1,4 +1,5 @@
 <h1>HTML Starter</h1>
+
 <p>Production-ready Gulp starter.</p>
 
 <h2>How to use HTML Starter</h2>
@@ -38,7 +39,7 @@
 
 <pre>@@include('html/header.html', {})</pre>
 
-<p>Variables? No problem:</p>
+<p>With variables:</p>
 
 <pre>
 @@include('html/head.html',{
