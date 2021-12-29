@@ -22,6 +22,7 @@ export const path = {
         styles: `${srcFolder}/styles/app.sass`,
         html: `${srcFolder}/*.html`,
         files: `${srcFolder}/files/**/*.*`,
+        fontsIcon: `${srcFolder}/fonts/iconfont/**/*.*`,
         svgicons: `${srcFolder}/svgicons/*.svg`
     },
     watch: { //Отдельные пути к файлам и папки за которыми следить

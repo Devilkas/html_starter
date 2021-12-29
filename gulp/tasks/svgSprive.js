@@ -10,11 +10,12 @@ export const svgSprive = () => {
         .pipe(svgSprite({
             mode: {
                 stack: {
-                    sprite: `../icons/icons.svg`,
+                    sprite: `../fonts/iconfont/icons.svg`,
                     //Создавать страницу с перечнем иконок
-                    example: true
+                    // example: true
                 }
             },
         }))
+
         .pipe(app.gulp.dest(`${app.path.build.images}`))
 }

@@ -1,0 +1,80 @@
+@font-face {
+	font-family: "icons";
+	src: url('../fonts/iconfont/icons.eot');
+	src: url('../fonts/iconfont/icons.eot?#iefix') format('eot'),
+		url('../fonts/iconfont/icons.woff2') format('woff2'),
+		url('../fonts/iconfont/icons.woff') format('woff'),
+		url('../fonts/iconfont/icons.ttf') format('truetype'),
+		url('../fonts/iconfont/icons.svg#icons') format('svg');
+}
+
+@mixin icon-styles {
+	font-family: "icons";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+
+%icon {
+	@include icon-styles;
+}
+
+@function icon-char($filename) {
+	$char: "";
+
+	@if $filename == caret-down {
+		$char: "\E001";
+	}
+	@if $filename == facebook {
+		$char: "\E002";
+	}
+	@if $filename == media-player {
+		$char: "\E003";
+	}
+	@if $filename == mobile-phone2 {
+		$char: "\E004";
+	}
+	@if $filename == viber {
+		$char: "\E005";
+	}
+	@if $filename == youtube {
+		$char: "\E006";
+	}
+
+	@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %icon;
+		} @else {
+			@include icon-styles;
+		}
+		content: icon-char($filename);
+	}
+}
+
+._icon-caret-down {
+	@include icon(caret-down);
+}
+._icon-facebook {
+	@include icon(facebook);
+}
+._icon-media-player {
+	@include icon(media-player);
+}
+._icon-mobile-phone2 {
+	@include icon(mobile-phone2);
+}
+._icon-viber {
+	@include icon(viber);
+}
+._icon-youtube {
+	@include icon(youtube);
+}
