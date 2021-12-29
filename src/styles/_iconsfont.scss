@@ -27,23 +27,14 @@
 @function icon-char($filename) {
 	$char: "";
 
-	@if $filename == caret-down {
+	@if $filename == facebook {
 		$char: "\E001";
 	}
-	@if $filename == facebook {
+	@if $filename == viber {
 		$char: "\E002";
 	}
-	@if $filename == media-player {
-		$char: "\E003";
-	}
-	@if $filename == mobile-phone2 {
-		$char: "\E004";
-	}
-	@if $filename == viber {
-		$char: "\E005";
-	}
 	@if $filename == youtube {
-		$char: "\E006";
+		$char: "\E003";
 	}
 
 	@return $char;
@@ -60,17 +51,8 @@
 	}
 }
 
-._icon-caret-down {
-	@include icon(caret-down);
-}
 ._icon-facebook {
 	@include icon(facebook);
-}
-._icon-media-player {
-	@include icon(media-player);
-}
-._icon-mobile-phone2 {
-	@include icon(mobile-phone2);
 }
 ._icon-viber {
 	@include icon(viber);
