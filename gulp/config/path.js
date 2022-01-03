@@ -27,7 +27,7 @@ export const path = {
     },
     watch: { //Отдельные пути к файлам и папки за которыми следить
         js: `${srcFolder}/js/**/*.js`,
-        styles: `${srcFolder}/styles/**/*.sass`,
+        styles: `${srcFolder}/styles/**/*.{sass,scss}`,
         html: `${srcFolder}/**/*.html`,
         images: `${srcFolder}/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
         files: `${srcFolder}/files/**/*.*`,
