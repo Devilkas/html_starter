@@ -12,7 +12,7 @@
         "svgSprive": "gulp svgSprive",
         "svgIconFont": "gulp svgIconFont"
     },
-    "author": "JavuSСriptus",
+    "author": "KushnerovOleksandr",
     "license": "ISC",
     "devDependencies": {
         "browser-sync": "latest",
