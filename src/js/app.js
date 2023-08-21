@@ -9,7 +9,6 @@
 // window.IMask = IMask;
 // window.Swal = Swal;
 
-
 import { isWebp } from "./components/_isWebp.js";
 import { nav } from "./components/_nav.js";
 import { modal } from "./components/_modal.js";
